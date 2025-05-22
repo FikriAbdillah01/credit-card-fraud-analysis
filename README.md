@@ -21,5 +21,11 @@ This page explains about what i found in the data.
 ### The Amount of the Transaction
 This subsubpage contains the total of the occured transaction. See figure below
 
+### Class
+This page dedicated to explain the class feature in the dataset
 
+### Outlier and Skewness
+Outlier is .....
+
+Skewness is.......
 
