@@ -12,8 +12,7 @@ The data published by Machine Learning Research Group University Libe de Bruxell
 - Time: This feature represents time when the credit card transaction occured 
 - the amount of transaction: represent the total transaction occured at that time
 - Identity of the customer: due to the protection regulation of the bank, the identity customer is turned into random numbers
-- Class: This columns represent the classification of the credit card transaction
-
+- Class: A column that contains indications of fraud or not a transaction.
 
 ## Exploratory Data Analysis
 This page explains about what i found in the data.
@@ -25,7 +24,16 @@ This subsubpage contains the total of the occured transaction. See figure below
 This page dedicated to explain the class feature in the dataset
 
 ### Outlier and Skewness
-Outlier is .....
+Outliers are data points that have significant differences in value between the values ​​in the dataset. The figure below represented the amount column. 
 
-Skewness is.......
 
+Skewness is a measure of how asymmetrical the data distribution is and is one way to determine the symmetry of the data distribution. The figure........
+
+
+## Machine Learning Result
+This page dedicated to explain the machine learning metrics result. 
+
+## Conclusion
+The conclusion of the research is.......
+
+## Futher Research
