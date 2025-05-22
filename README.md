@@ -11,17 +11,17 @@ The data published by Machine Learning Research Group University Libe de Bruxell
 
 - Time: This feature represents time when the credit card transaction occured 
 - the amount of transaction: represent the total transaction occured at that time
-- Identity of the customer: due to the protection regulation of the bank, the identity customer is turned into random numbers
+- Identity of the customer (V1 to V32): due to the protection regulation of the bank, the identity customer is turned into random numbers
 - Class: A column that contains indications of fraud or not a transaction.
 
 ## Exploratory Data Analysis
-This page explains about what i found in the data.
+This page explains about what is inside of the dataset.
 
 ### The Amount of the Transaction
-This subsubpage contains the total of the occured transaction. See figure below
+This subsubpage contains the total of the occured transaction. The figure below shows the distribution data of the amount coloumn. Based on the picture, the majority of the total transaction occured between 0 and 1000 USD, either fraud or not. The plot picture also means that the fraud transactions in that range are hard to be detected.
 
 ### Class
-This page dedicated to explain the class feature in the dataset
+The class feature contains 0 or 1 that represent the transactions are categorized non-fraud or fraud, respectively. 
 
 ### Outlier and Skewness
 Outliers are data points that have significant differences in value between the values ​​in the dataset. The figure below represented the amount column. 
