@@ -26,8 +26,11 @@ The class feature contains 0 or 1 that represent the transactions are categorize
 ### Outlier and Skewness
 Outliers are data points that have significant differences in value between the values ​​in the dataset. The figure below represented the amount column. 
 
-
 Skewness is a measure of how asymmetrical the data distribution is and is one way to determine the symmetry of the data distribution. The figure........
+
+## Preprocessing Step
+This is Preprocessing step subchapter
+
 
 
 ## Machine Learning Result
