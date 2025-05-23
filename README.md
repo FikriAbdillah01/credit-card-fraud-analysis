@@ -4,7 +4,10 @@
 A credit card is an electronic payment tool that uses a card issued by a bank or financial institution to make transactions. With this practical thing, customers can make an easy and immediate transaction. However, the problem lies on the transaction that not fully secured. However, these transactions are not completely safe. Based on the The Federal Trade Commision 2024 data, the fraud problem significantly rose by six million customers from 2001 to 2023 with the total loss of 10 billion USD.
 
 ## Objective
-The objective of this project is to create fraud detection using machine learning model.
+The objective of this project is:
+
+- the amount of fraud transaction
+- create fraud detection using machine learning model
 
 ## Data Description
 The data published by Machine Learning Research Group University Libe de Bruxelles. The dataset contains:
@@ -29,8 +32,7 @@ Outliers are data points that have significant differences in value between the 
 Skewness is a measure of how asymmetrical the data distribution is and is one way to determine the symmetry of the data distribution. The figure........
 
 ## Preprocessing Step
-This is Preprocessing step subchapter
-
+The class feature has severe data imbalance that needs to be addressed by using oversampling method. The figure below shows before and after the method implemented.
 
 
 ## Machine Learning Result
