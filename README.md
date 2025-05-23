@@ -32,7 +32,7 @@ This subsubpage contains the total of the occured transaction. The figure below 
 The class feature contains 0 or 1 that represent the transactions are categorized non-fraud or fraud, respectively.
 
 <p align = "center">
-  <img width = "400" height = "400" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/2026523ff91659d09aec80e5f07dffab8c3253a1/figures/Countplot%20of%20CC%20Class.png">
+  <img width = "400" height = "400" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/2026523ff91659d09aec80e5f07dffab8c3253a1/figures/Countplot%20of%20CC%20Class.png" alt = "dist class figure">
 </p>
 
 - The figure shows that the fraud transaction rarely occured. It less than 0.5% (about 490 in total) of the more than 250 thousands transanction in total.
@@ -43,7 +43,14 @@ The class feature contains 0 or 1 that represent the transactions are categorize
 The V1 to V32 features represent the customer personal identity, such as name, address, sex, job, etc. which had been changed by PCA method due to the complexity of the dataset and bank protection regulation.
 
 ### Outlier and Skewness
-Outliers are data points that have significant differences in value between the values ​​in the dataset. In the amount feature,
+Outliers are data points that have significant differences in value between the values ​​in the dataset. This anomaly can be seen by using a few figures, such as distribution plot or boxplot.
+- The 
+
+<p align = "center">
+  <img width = "400" height = "300" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/5cba031f89890f256f55633141aec67de6f95f66/figures/Boxplot%20of%20the%20Amount%20Transaction.png">
+</p>
+
+
 
 Skewness is a measure of how asymmetrical the data distribution is and is one way to determine the symmetry of the data distribution. The figure........
 
