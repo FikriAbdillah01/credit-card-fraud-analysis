@@ -23,12 +23,19 @@ This page explains about what is inside of the dataset.
 ### The Amount of the Transaction
 This subsubpage contains the total of the occured transaction. The figure below shows the distribution data of the amount coloumn. Based on the picture, the majority of the total transaction occured between 0 and 1000 USD, either fraud or not. The plot picture also means that the fraud transactions in that range are hard to be detected.
 
+<p align = "center">
+  <img width = "600" height "400" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/b597919dadca4910004d01c0182187fb7323c5fd/figures/The%20Amount%20of%20Fraud%20Transaction%20(1).png">
+</p>
+
 ### Class
 The class feature contains 0 or 1 that represent the transactions are categorized non-fraud or fraud, respectively.
 
 <p align = "center">
   <img width = "400" height = "400" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/2026523ff91659d09aec80e5f07dffab8c3253a1/figures/Countplot%20of%20CC%20Class.png">
 </p>
+
+- The figure shows that the fraud transaction rarely occured. It less than 0.5% (about 490 in total) of the more than 250 thousands transanction in total.
+- The difference in number between fraud and non-fraud is significant. The data shows severe imbalace between those two transactions.
 
 ### Outlier and Skewness
 Outliers are data points that have significant differences in value between the values ​​in the dataset. The figure below represented the amount column. 
