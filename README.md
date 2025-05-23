@@ -21,10 +21,11 @@ The data published by Machine Learning Research Group University Libe de Bruxell
 This page explains about what is inside of the dataset.
 
 ### The Amount of the Transaction
-This subsubpage contains the total of the occured transaction. The figure below shows the distribution data of the amount coloumn. Based on the picture, the majority of the total transaction occured between 0 and 1000 USD, either fraud or not. The plot picture also means that the fraud transactions in that range are hard to be detected.
+This subsubpage contains the total of the occured transaction. The figure below shows the distribution data of the amount coloumn. 
+- Based on the picture, the majority of the total transaction occured between 0 and 1000 USD, either fraud or not. The plot picture also means that the fraud transactions in that range are hard to be detected.
 
 <p align = "center">
-  <img width = "600" height "400" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/b597919dadca4910004d01c0182187fb7323c5fd/figures/The%20Amount%20of%20Fraud%20Transaction%20(1).png">
+  <img width = "600" height "300" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/b597919dadca4910004d01c0182187fb7323c5fd/figures/The%20Amount%20of%20Fraud%20Transaction%20(1).png">
 </p>
 
 ### Class
