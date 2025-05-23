@@ -10,7 +10,7 @@ The objective of this project is:
 - create fraud detection using machine learning model
 
 ## Data Description
-The data published by Machine Learning Research Group University Libe de Bruxelles. The dataset contains:
+The data published by Machine Learning Research Group University Libe de Bruxelles. Credit card dataset cannot be uploaded to Github due to large data size. This dataset can be downloaded in Kaggle platform. The dataset contains:
 
 - Time: This feature represents time when the credit card transaction occured 
 - the amount of transaction: represent the total transaction occured at that time
@@ -38,8 +38,12 @@ The class feature contains 0 or 1 that represent the transactions are categorize
 - The figure shows that the fraud transaction rarely occured. It less than 0.5% (about 490 in total) of the more than 250 thousands transanction in total.
 - The difference in number between fraud and non-fraud is significant. The data shows severe imbalace between those two transactions.
 
+### Customer Identity (V1-V32)
+
+The V1 to V32 features represent the customer personal identity, such as name, address, sex, job, etc. which had been changed by PCA method due to the complexity of the dataset and bank protection regulation.
+
 ### Outlier and Skewness
-Outliers are data points that have significant differences in value between the values ​​in the dataset. The figure below represented the amount column. 
+Outliers are data points that have significant differences in value between the values ​​in the dataset. In the amount feature,
 
 Skewness is a measure of how asymmetrical the data distribution is and is one way to determine the symmetry of the data distribution. The figure........
 
