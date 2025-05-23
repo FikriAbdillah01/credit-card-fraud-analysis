@@ -24,7 +24,9 @@ This page explains about what is inside of the dataset.
 This subsubpage contains the total of the occured transaction. The figure below shows the distribution data of the amount coloumn. Based on the picture, the majority of the total transaction occured between 0 and 1000 USD, either fraud or not. The plot picture also means that the fraud transactions in that range are hard to be detected.
 
 ### Class
-The class feature contains 0 or 1 that represent the transactions are categorized non-fraud or fraud, respectively. 
+The class feature contains 0 or 1 that represent the transactions are categorized non-fraud or fraud, respectively.
+
+![Countplot of the Class Feature](figures/Countplot of CC Class.png)
 
 ### Outlier and Skewness
 Outliers are data points that have significant differences in value between the values ​​in the dataset. The figure below represented the amount column. 
