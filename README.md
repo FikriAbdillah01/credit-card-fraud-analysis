@@ -26,7 +26,9 @@ This subsubpage contains the total of the occured transaction. The figure below 
 ### Class
 The class feature contains 0 or 1 that represent the transactions are categorized non-fraud or fraud, respectively.
 
-![[Countplot of the Class Feature](figures/Countplot of CC Class.png)](https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/2026523ff91659d09aec80e5f07dffab8c3253a1/figures/Countplot%20of%20CC%20Class.png)
+<p align = "center">
+  <img width = "300" height = "400" href = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/2026523ff91659d09aec80e5f07dffab8c3253a1/figures/Countplot%20of%20CC%20Class.png">
+</p>
 
 ### Outlier and Skewness
 Outliers are data points that have significant differences in value between the values ​​in the dataset. The figure below represented the amount column. 
