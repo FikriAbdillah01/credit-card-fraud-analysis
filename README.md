@@ -43,13 +43,12 @@ The class feature contains 0 or 1 that represent the transactions are categorize
 The V1 to V32 features represent the customer personal identity, such as name, address, sex, job, etc. which had been changed by PCA method due to the complexity of the dataset and bank protection regulation.
 
 ### Outlier and Skewness
-Outliers are data points that have significant differences in value between the values ​​in the dataset. This anomaly can be seen by using a few figures, such as distribution plot or boxplot.
-- The 
+Outliers are data points that have significant differences in value between the values ​​in the dataset. This anomaly can be seen by a boxplot.
+- The plot illustrates the numerous outliers in data. 
 
 <p align = "center">
   <img width = "400" height = "300" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/5cba031f89890f256f55633141aec67de6f95f66/figures/Boxplot%20of%20the%20Amount%20Transaction.png">
 </p>
-
 
 
 Skewness is a measure of how asymmetrical the data distribution is and is one way to determine the symmetry of the data distribution. The figure........
