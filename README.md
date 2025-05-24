@@ -61,7 +61,7 @@ Skewness is a measure of how asymmetrical the data distribution is and is one wa
   <img width = "400" height = "300" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/e3a51f5ce11a1f3bc917b51e20bbb8154691b1ab/figures/Skewness%20Score%20for%20each%20Features.png">
 </p>
 
-- These features are beyond normal distribution score. Moreover, the Class, Amount, and V8 are the most skewed data.
+- These features are beyond normal distribution score. Moreover, the Class, Amount, and V8 are the most skewed data. We will handle the most severe ones.
 
 ## Preprocessing Step
 The class feature has severe data imbalance that needs to be addressed by using oversampling method. The figure below shows before and after the method implemented.
