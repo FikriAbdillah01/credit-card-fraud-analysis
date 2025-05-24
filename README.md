@@ -12,6 +12,7 @@ The objective of this project is:
 
 - the amount of fraud transaction
 - create fraud detection using machine learning model
+- To see the difference between normal and oversampling method through metric.
 
 ## Data Description
 The data published by Machine Learning Research Group University Libe de Bruxelles. Credit card dataset cannot be uploaded to Github due to large data size. This dataset can be downloaded in Kaggle platform. The dataset contains:
@@ -61,7 +62,7 @@ Skewness is a measure of how asymmetrical the data distribution is and is one wa
   <img width = "800" height = "300" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/e3a51f5ce11a1f3bc917b51e20bbb8154691b1ab/figures/Skewness%20Score%20for%20each%20Features.png">
 </p>
 
-- These features are beyond normal distribution score. Moreover, the Class, Amount, and V8 are the most skewed data. We will handle the most severe ones.
+- These features are beyond normal distribution score. Moreover, the Class, Amount, V8, and V28 are the most skewed data. We will handle the most skewed data.
 
 ## Preprocessing Step
 ### Oversampling
@@ -70,7 +71,7 @@ The class feature has severe data imbalance that needs to be addressed by using 
 <p align = "center">
   <img width ="500" height = "400" src = "">
 </p>
-- The sythetic fraud class is oversampled by SMOTE in order to avoid bias of model accuracy.
+- The technique is used to overcome the severe imbalance issue by having the minority class compensate for the majority (oversampling).
 
 ### Handling Outlier
 The outlier of data can be handled by using two metdos, imputation or Isolation Forest. The result of those methods can we see in figure below.
@@ -82,7 +83,8 @@ The outlier of data can be handled by using two metdos, imputation or Isolation 
 - If Raw data distribution compared to the Isolation Forest, there is no significant alteration between them. However, Imputation method notably shifted the data. 
 
 ## Machine Learning Result
-This page dedicated to explain the machine learning metrics result. 
+Proyek kali ini menggunakan beberapa open-source seperti XGBoost, Decision Tree, dan Random Forest. 
+
 
 ## Conclusion
 The conclusion of the research is.......
