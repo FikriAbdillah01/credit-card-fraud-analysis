@@ -76,7 +76,7 @@ The class feature has severe data imbalance that needs to be addressed by using 
 The outlier of data can be handled by using two metdos, imputation or Isolation Forest. The result of those methods can we see in figure below.
 
 <p align = "center">
-  <img width = "500" height = "300" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/799f50d82591796debfb37a34cb9d719bca57643/figures/Amount%20Plot%20Dist.png">
+  <img width = "900" height = "200" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/799f50d82591796debfb37a34cb9d719bca57643/figures/Amount%20Plot%20Dist.png">
 </p>
 
 - If Raw data distribution compared to the Isolation Forest, there is no significant alteration between them. However, Imputation method notably shifted the data. 
