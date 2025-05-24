@@ -87,6 +87,9 @@ This project uses several open-sources such as XGBoost, Decision Tree, and Rando
 
 
 ## Conclusion
-The conclusion of the research is.......
+The conclusion of the research is
+
+- adfadfasdfas
+- adfadafad
 
 ## Futher Research
