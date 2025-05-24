@@ -27,6 +27,7 @@ This page explains about what is inside of the dataset.
 ### The Amount of the Transaction
 This subsubpage contains the total of the occured transaction. The figure below shows the distribution data of the amount coloumn. 
 - Based on the picture, the majority of the total transaction occured between 0 and 1000 USD, either fraud or not. The plot picture also means that the fraud transactions in that range are hard to be detected.
+- Transactions made above this nominal amount are also often carried out with varying values.
 
 <p align = "center">
   <img width = "600" height "300" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/b597919dadca4910004d01c0182187fb7323c5fd/figures/The%20Amount%20of%20Fraud%20Transaction%20(1).png">
@@ -39,8 +40,8 @@ The class feature contains 0 or 1 that represent the transactions are categorize
   <img width = "400" height = "400" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/2026523ff91659d09aec80e5f07dffab8c3253a1/figures/Countplot%20of%20CC%20Class.png" alt = "dist class figure">
 </p>
 
-- The figure shows that the fraud transaction rarely occured. It less than 0.5% (about 490 in total) of the more than 250 thousands transanction in total.
-- The difference in number between fraud and non-fraud is significant. The data shows severe imbalace between those two transactions.
+- The figure shows that the fraud transaction rarely occured. It less than 0.5% (about 490) of more than 250 thousands transanction in total.
+- The difference in number between fraud and non-fraud is significant. The plot shows severe imbalace between those two transactions.
 
 ### Customer Identity (V1-V32)
 
@@ -54,8 +55,13 @@ Outliers are data points that have significant differences in value between the 
   <img width = "400" height = "300" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/5cba031f89890f256f55633141aec67de6f95f66/figures/Boxplot%20of%20the%20Amount%20Transaction.png">
 </p>
 
+Skewness is a measure of how asymmetrical the data distribution is and is one way to determine the symmetry of the data distribution. If the mean, median, mode of data are in single one value, then the feature is symmetric. There is one another way to measure the skewness or asymetrical data spread, by using Pearson first coefficient of skewness or Pearson second coefficient of skewness. The range of normal data distribution is between -1 and 1. 
 
-Skewness is a measure of how asymmetrical the data distribution is and is one way to determine the symmetry of the data distribution. The figure........
+<p align = "center">
+  <img width = "400" height = "300" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/e3a51f5ce11a1f3bc917b51e20bbb8154691b1ab/figures/Skewness%20Score%20for%20each%20Features.png">
+</p>
+
+- These features are beyond normal distribution score. Moreover, the Class, Amount, and V8 are the most skewed data.
 
 ## Preprocessing Step
 The class feature has severe data imbalance that needs to be addressed by using oversampling method. The figure below shows before and after the method implemented.
