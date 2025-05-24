@@ -58,7 +58,7 @@ Outliers are data points that have significant differences in value between the 
 Skewness is a measure of how asymmetrical the data distribution is and is one way to determine the symmetry of the data distribution. If the mean, median, mode of data are in single one value, then the feature is symmetric. There is one another way to measure the skewness or asymetrical data spread, by using Pearson first coefficient of skewness or Pearson second coefficient of skewness. The range of normal data distribution is between -1 and 1. 
 
 <p align = "center">
-  <img width = "400" height = "300" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/e3a51f5ce11a1f3bc917b51e20bbb8154691b1ab/figures/Skewness%20Score%20for%20each%20Features.png">
+  <img width = "700" height = "400" src = "https://github.com/FikriAbdillah01/credit-card-fraud-analysis/blob/e3a51f5ce11a1f3bc917b51e20bbb8154691b1ab/figures/Skewness%20Score%20for%20each%20Features.png">
 </p>
 
 - These features are beyond normal distribution score. Moreover, the Class, Amount, and V8 are the most skewed data. We will handle the most severe ones.
