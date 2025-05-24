@@ -83,7 +83,7 @@ The outlier of data can be handled by using two metdos, imputation or Isolation 
 - If Raw data distribution compared to the Isolation Forest, there is no significant alteration between them. However, Imputation method notably shifted the data. 
 
 ## Machine Learning Result
-Proyek kali ini menggunakan beberapa open-source seperti XGBoost, Decision Tree, dan Random Forest. 
+This project uses several open-sources such as XGBoost, Decision Tree, and Random Forest.
 
 
 ## Conclusion
