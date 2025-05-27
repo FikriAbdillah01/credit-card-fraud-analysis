@@ -44,7 +44,7 @@ This subsubpage contains the total of the occured transaction. The figure below 
 
 - From the 50-hour recorded transaction, the amount of fraud one is less than ten thousand USD. 
 
-- The maximum total transaction value obtained by the fraudster from this credit card incident was around 5000 USD in the 10th hour. The criminal got it at a time when many customers were making large transactions.
+- The maximum total transaction value obtained by the fraudster from this credit card incident was around 5000 USD in the 10th hour. The criminal received it at a busy time when many customers were doing transaction.
 
 ### Class
 The class feature contains 0 or 1 that represent the transactions are categorized non-fraud or fraud, respectively.
