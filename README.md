@@ -48,7 +48,7 @@ This subsubpage contains the total of the occured transaction. The figure below 
   <img width = 800 height = "300" src = "figures/plot of amount transaction.png">
 </p>
 
-- From the 50-hour recorded transaction, the amount of fraud one is less than ten thousand USD. 
+- From the 48-hour recorded transaction, the amount of fraud one is less than ten thousand USD. 
 
 - The maximum total transaction value obtained by the fraudster from this credit card incident was around 5000 USD in the 10th hour. The criminal received it at a busy time when many customers were doing transaction.
 
