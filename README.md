@@ -1,4 +1,4 @@
-# Credit Card Fraud Analysis
+# Credit Card Fraud Analysis (On Progress)
 
 ## Problem
 A credit card is an electronic payment tool that uses a card issued by a bank or financial institution to make transactions. With this practical thing, customers can make an easy and immediate transaction. However, the problem lies on the transaction that not fully secured. However, these transactions are not completely safe. Based on the The Federal Trade Commision 2024 data, the fraud problem significantly rose by six million customers from 2001 to 2023 with the total loss of 10 billion USD.
