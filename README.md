@@ -1,4 +1,4 @@
-# Credit Card Fraud Analysis (On Progress)
+# Credit Card Fraud Analysis (On Going)
 
 ## Problem
 A credit card is an electronic payment tool that uses a card issued by a bank or financial institution to make transactions. With this practical thing, customers can make an easy and immediate transaction. However, the problem lies on the transaction that not fully secured. However, these transactions are not completely safe. Based on the The Federal Trade Commision 2024 data, the fraud problem significantly rose by six million customers from 2001 to 2023 with the total loss of 10 billion USD.
@@ -48,7 +48,7 @@ This subsubpage contains the total of the occured transaction. The figure below 
   <img width = 800 height = "300" src = "figures/plot of amount transaction.png">
 </p>
 
-- From the 48-hour recorded transaction, the amount of fraud one is less than ten thousand USD. 
+- From the 50-hour recorded transaction, the amount of fraud one is less than ten thousand USD. 
 
 - The maximum total transaction value obtained by the fraudster from this credit card incident was around 5000 USD in the 10th hour. The criminal received it at a busy time when many customers were doing transaction.
 
@@ -56,7 +56,7 @@ This subsubpage contains the total of the occured transaction. The figure below 
   <img width = "800" height = "300" src = "figures/plot of total occured transaction.png">
 </p>
 
-- Berdasarkan plot diatas, transaksi normal yang terjadi berlangsung dari pagi hingga menjelang malam dan terjadi secara periodik. Plot transaksi fraud terjadi paling sering pada jam ke-11 dan sekitar jam ke 25. Fraud tidak sering terjadi saat transaksi. 
+- The figure above illustrates the number of proceeding transactions recorded over a 48-hour period. Normal transactions that occur take place from morning to evening and occur periodically. Credit card fraud transaction occur most often at 11th and around 25th hour. The incident does not happen during the transaction.
 
 
 ### Class
@@ -119,31 +119,30 @@ The outlier of data can be handled by using two methods, imputation or Isolation
 ### Feature Selection
 #### Imputation Version
 
-Metode Imputation digunakan untuk menghilangkan outlier pada data dengan cara menggantinya dengan variabel random yang masih termasuk didalam IQR.
+The imputation method is used to eliminate outliers in the data by substitute them with random variables that are still included in the (Interquartile Range) IQR .
 
 <p align = "center">
   <img width = "700" height = "500" src = "figures/Decision Tree Feature Importances (InterQuantile).png">
 </p>
 
-- Berdasarkan plot diatas, ada empat feature importances apabila menggunakan model Decision Tree dengan Imputation. Fitur V17 dan V10 merupakan fitur penting pada data.
+- Based on the figure above, there are four feature importances when using the decision tre model with imputation. The feature V17 and V10 are the highest score.
 
 <p align = "center">
   <img width = "700" height = "500" src = "figures/Random Forest Feature Importances (InterQuantile).png">
 </p>
 
-- Plot diatas menunjukkan ranking berdasarkan skor feature importances model Random Forest dengan metode preprocessing Interquantile. 
-
-- Berdasarkan dua model tersebut, V10 dan V17 merupakan fitur yang memiliki skor importances yang selalu masuk 5 teratas. 
+- The figure above shows the rank based on feature importances score by random forest model with imputation method. Ther are three features with the score above 0.1, V11, V17, dan V10.
+- Based on those models,the V10 and V17 are two features that have importance scores that are always in the top 5. 
 
 #### Isolation Forest Version
 
-Isolation Forest merupakan unsupervised model yang digunakan untuk mendeteksi titik data yang dianggap anomali (outlier). 
+Isolation Forest is an unsupervised model used to detect data points that are considered anomalies (outliers). 
 
 <p align = "center">
   <img width = "700" height = "500" src = "figures/Decision Tree Feature Importances (Isolation Forest).png">
 </p>
 
-- Berdasarkan gambar diatas, fitur V14 mendapat skor tertinggi dalam hal feature importances.
+- Based on the image above, the V14 feature gets the highest score in terms of feature importances.
 
 <p align = "center">
   <img width = "700" height = "500" src = "figures/Random Forest Feature Importances (Isolation Forest).png" >
@@ -158,7 +157,8 @@ This project uses several open-sources such as XGBoost, Decision Tree, and Rando
 
 #### Raw data
 
-Performa model dengan menggunakan data kotor (data tanpa preprocessing) dapat dilihat pada gambar dibawah
+The Performance using raw data (data without/before preprocessing) can be seen in the image below
+
 
 <p align = "center">
   <img width = "700" height = "400" src = "figures/rf dt conf mat (raw data).png">
@@ -166,9 +166,16 @@ Performa model dengan menggunakan data kotor (data tanpa preprocessing) dapat di
 
 - From the plot, we see the performance of decision tree and random forest model. They can predict more than 70000 of non fraud transaction and about 80 for otherwise.
 
-<p align = "center">
-  <img width = "700" height = "400" src = "figures/.png">
-</p>
+
+| Machine Learning Model | Decision Tree | Random Forest |
+| :--------------:| :------:| :------: |
+| Accuracy        |   100 % | 100% |
+| Recall          |   72 %  | 71% |
+| F1 Score        |   100 % | 100% |
+| Precision       |  100 %  | 100% |
+
+
+- The machine learning models that utilize raw data can have 100 percent accuracy, tapi skor recall hanya 70 an persen. This is biased because the number of False Positive and False Negative, based on confusion matrix figure above, is more than zero. It means that the machine learning still fail to detect a handfull of credit card fraud. Futhremore, this bias accuracy is the result of severly imbalanced data.
 
 ## Conclusion
 The conclusion of the research is
