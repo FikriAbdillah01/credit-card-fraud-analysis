@@ -192,6 +192,10 @@ The research suggestion of this project:
 
 ## Reference
 
+## Detailed Version
+
+The detail version (more technical) can be seen in this pdf version.
+
 ## Code
 
 ### Amount Feature Distribution Plot
