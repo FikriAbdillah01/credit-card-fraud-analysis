@@ -22,6 +22,17 @@ Limitation that exist in this project:
 - Inadequate computing hardware makes this project time-consuming to execute on large amount dataset like credit card fraud, so not all open-source models are used.
 - The data used was published in 2016. Moreover, this data comes from several bank samples in Belgium, so it is necessary to have the latest data and calibrate the model to obtain good detection accuracy.
 
+## Tools
+Tools we used in this project:
+
+- python ver 2.2.2
+- matplotlib versi 3.10.0
+- seaborn ver 0.13.2
+- scikit learn ver 1.6.1
+- numphy versi 2.0.2
+- pandas ver 2.2.2
+- imbalanced-learn ver 0.13.0
+
 ## Data Description
 The data published by Machine Learning Research Group University Libe de Bruxelles. Credit card dataset cannot be uploaded to Github due to large data size. This dataset can be downloaded in Kaggle platform. The dataset contains:
 
@@ -45,18 +56,18 @@ This subsubpage contains the total of the occured transaction. The figure below 
 - Transactions made above this nominal amount are also often carried out with varying values.
 
 <p align = "center">
-  <img width = 800 height = "300" src = "figures/plot of amount transaction.png">
+  <img width = 800 height = "300" src = "figures/transaction amount.png">
 </p>
 
-- From the 48-hour recorded transaction, the amount of fraud one is less than ten thousand USD. 
+- From the 48-hour recorded transaction, the amount of fraud one is less than ten thousand USD - about 0.1% of normal credit card transaction. 
 
-- The maximum total transaction value obtained by the fraudster from this credit card incident was around 5000 USD in the 10th hour. The criminal received it at a busy time when many customers were doing transaction.
+- The maximum total transaction obtained by the fraudster from this credit card incident was around 5000 USD in the 10th hour. The criminal received it at a busy time when many customers were doing transaction.
 
 <p align = "center">
-  <img width = "800" height = "300" src = "figures/plot of total occured transaction.png">
+  <img width = "800" height = "300" src = "figures/transaction occured.png">
 </p>
 
-- The figure above illustrates the number of proceeding transactions recorded over a 48-hour period. Normal transactions that occur take place from morning to evening and occur periodically. Credit card fraud transaction occur most often at 11th and around 25th hour. The incident does not happen during the transaction.
+- The figure above illustrates of the credit card utilization that have been recorded over a 48-hour period. Normal transactions that occur take place from morning to evening and occur periodically. The majority of customer use credit card at day, then significantly dropped at night. Meanwile, the fraud transaction always happened, whether day or night. From the record, the peak of the credit card fraud occured at 11th and around 25th hour.
 
 
 ### Class
@@ -71,13 +82,7 @@ The class feature contains 0 or 1 that represent the transactions are categorize
 
 ### Customer Identity (V1-V32)
 
-The V1 to V32 features represent the customer personal identity, such as name, address, sex, job, etc. which had been changed by PCA method due to the complexity of the dataset and bank protection regulation. The distribution of the sample, V1 - V4, can be seen in the image below.
-
-<p align = "center">
-  <img width = "500" height = "400" src = ".png">
-</p>
-
-- The sample of the customer identity, V1 to V4, data distribution shows a handful of them realized that their credit credit card had been fraud by criminal.
+The V1 to V32 features represent the customer personal identity, such as name, address, sex, job, etc. which had been changed by PCA method due to the complexity of the dataset and bank protection regulation. 
 
 ### Outlier and Skewness
 Outliers are data points that have significant differences in value between the values ​​in the dataset. This anomaly can be seen by a boxplot.
@@ -117,65 +122,122 @@ The outlier of data can be handled by using two methods, imputation or Isolation
 
 ## Machine Learning Result
 ### Feature Selection
+
+Feature selection is a technique for filtering important features so that limited computing power can be utilized effectively. This dataset has more than 30 features with tens of thousands of transactions recorded in 48 hours. It would be a lot of time wasted if all features were included in the model. From this project, we will select features that get a feature importance score of more than 0.05.
+
+#### Raw Data
+We need to compare the raw, isolation, inputation version dataset. Raw data is the dataset without outlier treatment. 
+
+<p align = 'center'>
+  <img width = "700" height = "500" src = "figures/random forest feature importances raw data.png">
+</p>
+
+- The feature importances by no-outlier-treatment data shows that there are six features will be the input to the model, V17, V12, V14, V16, V10, and V11.
+
 #### Imputation Version
 
-The imputation method is used to eliminate outliers in the data by substitute them with random variables that are still included in the (Interquartile Range) IQR .
+The imputation method is used to eliminate outliers in the data by substitute them with random variables that are still included in the (Interquartile Range) IQR.
 
 <p align = "center">
-  <img width = "700" height = "500" src = "figures/Decision Tree Feature Importances (InterQuantile).png">
+  <img width = "700" height = "500" src = "figures/random forest feature importances imputation.png">
 </p>
 
-- Based on the figure above, there are four feature importances when using the decision tre model with imputation. The feature V17 and V10 are the highest score.
-
-<p align = "center">
-  <img width = "700" height = "500" src = "figures/Random Forest Feature Importances (InterQuantile).png">
-</p>
-
-- The figure above shows the rank based on feature importances score by random forest model with imputation method. Ther are three features with the score above 0.1, V11, V17, dan V10.
-- Based on those models,the V10 and V17 are two features that have importance scores that are always in the top 5. 
+- The figure above shows the rank based on feature importances score by random forest model with imputation method. Ther are seven features with the score above 0.05, that is V17, V11, V10, V12, V16, V7, and V3.
 
 #### Isolation Forest Version
 
 Isolation Forest is an unsupervised model used to detect data points that are considered anomalies (outliers). 
 
 <p align = "center">
-  <img width = "700" height = "500" src = "figures/Decision Tree Feature Importances (Isolation Forest).png">
-</p>
-
-- Based on the image above, the V14 feature gets the highest score in terms of feature importances.
-
-<p align = "center">
-  <img width = "700" height = "500" src = "figures/Random Forest Feature Importances (Isolation Forest).png" >
+  <img width = "700" height = "500" src = "figures/random forest feature importances isolation forest.png" >
 
 - Based on the Random Forest model, V4, V10, V14, and V17 are features with highest feature importance scores. 
 
-- When the two models are compared, V14 is a mandatory feature to be included in the prediction model. 
+- If we compared all of dataset with different preprocessing method, we can find that V17 is the most important feature in the dataset. 
 
 ### Model Performance
+#### Confusion Matrix without Oversampling Dataset
 
-This project uses several open-sources such as XGBoost, Decision Tree, and Random Forest. Due to limited computational power, some models cannot be used to predict fraudulent of the credit card.
-
-#### Raw data
-
-The Performance using raw data (data without/before preprocessing) can be seen in the image below
-
+Confusion matrix is ​​a performance evaluation table of a classification model.This project utilizes the Random Forest model with 3 datasets that are treated differently.
 
 <p align = "center">
-  <img width = "700" height = "400" src = "figures/rf dt conf mat (raw data).png">
+  <img width = "800" height = "300" src = "figures/rf dt conf mat no oversampling.png">
 </p>
 
-- From the plot, we see the performance of decision tree and random forest model. They can predict more than 70000 of non fraud transaction and about 80 for otherwise.
+- From the plot, we see the performance of decision tree and random forest model. They can detect more than 50000 of non fraud transaction and about 70 for otherwise.
+
+- Isolation Forest dataset in total is not as much as both raw and imputation data. It because some of the data has been considered anomaly and then removed.
 
 
-| Machine Learning Model | Decision Tree | Random Forest |
-| :--------------:| :------:| :------: |
-| Accuracy        |   100 % | 100% |
-| Recall          |   72 %  | 71% |
-| F1 Score        |   100 % | 100% |
-| Precision       |  100 %  | 100% |
+| Preprocessing Method | Accuracy | Recall | F1 | Precision |
+| :-----------------:| :------:| :------: | :-------: | :-----:|
+| Raw                |   100 % | 67%  | 74% | 83% |
+| Isolation Forest   |   100 % | 0%   | 0%  | 0%   |
+| Imputation         |   100 % | 69%  | 76% | 83%   |
 
+- The accuracy is how well the model detect fraud and normal transaction. The high accuracy means that the model can predict all fraud and non-fraud transaction correctly with small to none mistake. 
 
-- The machine learning models that utilize raw data can have 100 percent accuracy, tapi skor recall hanya 70 an persen. This is biased because the number of False Positive and False Negative, based on confusion matrix figure above, is more than zero. It means that the machine learning still fail to detect a handfull of credit card fraud. Futhremore, this bias accuracy is the result of severly imbalanced data.
+- The model that utilize non-oversampling data can have 100 percent accuracy, but the recall score only around 70 percent. We noticed that this is biased because the number of False Positive and False Negative, based on confusion matrix figure above, are still more than zero. It means that the machine learning still fail to detect a handfull of credit card fraud and non-fraud. Futhremore, this bias accuracy is the result of severly imbalanced data.
+
+- Recall (sensitivity) is measure ability of model to accurately predict of the actual fraud samples among the all fraud samples in data. The high recall score means that the model can totally predict actual fraud with small to none failure.
+
+- Model with Isolation Forest cannot detect fraud (0% recall). This indicates that most of the deleted data is considered anomaly. As a result, the model does not predict fraud. Meanwhile, raw data and imputation have sligthly less than 70% recall. It means that the model can correctly guess the fraud transaction around 70% of total fraud prediction.
+
+- Precision is a model ability to accurately predict fraud  
+
+#### Confusion Matrix with Oversampling Dataset
+
+This subchapter discuss what happened to the model after using oversampling method to significant imbalanced data. 
+
+<p align = "center">
+  <img width = "800" height = "300" src = "figures/rf dt conf mat oversampling.png">
+</p>
+
+- Based on Confusion Matrix above, the model utilize raw and imputation data can detect around 50 thousand credit card that are suspected of being fraud.
+
+| Preprocessing Method | Accuracy | Recall | F1 | Precision |
+| :----------:| :------:| :------: | :-------: | :------:|
+| Raw  |  92 % | 86% | 92% | 98% |
+| Isolation Forest   |  64 %  | 41% | 53% | 75%|
+| Imputation       |   93 % | 86% | 93% | 100 %|
+
+- After using oversampling method, the isolation forest dataset drastically changed. The accuracy singnificantly dropped to 64%. However, this report frequently changed when the code executed. The Raw and imputation performed well and does not experienced a significant change after executed.
+
+#### Confusion Matrix with Oversampled Data and Selected Parameter
+
+<p align = "center">
+  <img width = "800" height = "300" src = "figures/rf dt conf mat best parameter.png">
+</p>
+
+| Preprocessing Method | Accuracy | Recall | F1 | Precision |
+| :--------------:| :------:| :------: | :-------: | :-------:|
+| Raw Data       |   92% | 87% | 92% | 98% |
+| Isolation Forest   | 65% | 38% | 52% | 81% |
+| Imputation        |  93% | 88% | 93% | 98%|
+
+- There is no significant change in all aspect after using Grid Search hyperparameter method.
+
+- Reminder Note: Each dataset has different features as explained in the sub-chapter feature importances.
+
+### ROC-AUC Curve
+
+The Receiving Operating Characteristic Curve (ROC) is a curve that shows the classification performace of the model by varying treshold, while Area Under Curve (AUC) is a measure how well . The model is set to `random_state = 1`. 
+
+#### The Perfomance with Oversampling Method
+
+<p align = "center">
+  <img width = "800" height = "300" src = "figures/ROC Curve different dataset.png">
+</p>
+
+- The performance each dataset treatment are good.
+
+#### The Performance of Oversampling with Hyperparameter
+
+<p align = "center">
+  <img widht = "800" height = "300" src = "figures/ROC Curve best parameter.png">
+</p>
+
+- Isolation Forest model AUC score slightly dropped by 0.05 points after use Grid Search hyperparameter method. 
 
 ## Conclusion
 The conclusion of the research is
@@ -188,13 +250,15 @@ The conclusion of the research is
 The research suggestion of this project:
 
 - Try another machine learning model to predict the credit card fraud.
-- Some preprocessing models, instead of SMOTE, may be potentially improve the machine learning performance.
+- Some preprocessing models, instead of SMOTE, may be potentially improved the machine learning performance.
+
+
 
 ## Reference
 
-## Detailed Version
+- Andrea Dal Pozzolo, Olivier Caelen, Reid A. Johnson and Gianluca Bontempi. Calibrating Probability with Undersampling for Unbalanced Classification. In Symposium on Computational Intelligence and Data Mining (CIDM), IEEE, 2015
 
-The detail version (more technical) can be seen in this pdf version.
+- Dal Pozzolo, Andrea; Caelen, Olivier; Le Borgne, Yann-Ael; Waterschoot, Serge; Bontempi, Gianluca. Learned lessons in credit card fraud detection from a practitioner perspective, Expert systems with applications,41,10,4915-4928,2014, Pergamon.
 
 ## Code
 
