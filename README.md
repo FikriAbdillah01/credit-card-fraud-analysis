@@ -10,11 +10,9 @@ A credit card is an electronic payment tool that uses a card issued by a bank or
 ## Objective
 The objective of this project is:
 
-- the amount of fraud transaction at the time
 - How many transaction occured at that time
-- How much amount of USD the fraudster get at the time
-- create fraud detection using machine learning model
-- To see the difference of machine learning performance and feature importances between imputation and oversampling method through Area Under Curve (AUC).
+- How much amount of USD the fraudster get througout 48-hour recorded time.
+- To see the difference of machine learning performance and feature importances between raw, imputation, and oversampling method through metric performance.
 
 ## Limitation
 Limitation that exist in this project:
@@ -61,14 +59,15 @@ This subsubpage contains the total of the occured transaction. The figure below 
 
 - From the 48-hour recorded transaction, the amount of fraud one is less than ten thousand USD - about 0.1% of normal credit card transaction. 
 
-- The maximum total transaction obtained by the fraudster from this credit card incident was around 5000 USD in the 10th hour. The criminal received it at a busy time when many customers were doing transaction.
+- The fraud transaction in total around 60000 USD and maximum value transaction obtained by the fraudster from this credit card incident was around 5000 USD in the 10th hour. The criminal received it at a busy time when many customers were doing transaction.
 
 <p align = "center">
   <img width = "800" height = "300" src = "figures/transaction occured.png">
 </p>
 
-- The figure above illustrates of the credit card utilization that have been recorded over a 48-hour period. Normal transactions that occur take place from morning to evening and occur periodically. The majority of customer use credit card at day, then significantly dropped at night. Meanwile, the fraud transaction always happened, whether day or night. From the record, the peak of the credit card fraud occured at 11th and around 25th hour.
+- The figure above illustrates of the credit card utilization that have been recorded over a 48-hour period. Normal transactions that occur take place from morning to evening and occur periodically. The majority of customer use credit card at day, then significantly dropped at night. Meanwile, the fraud transaction always happened, whether day or night. From the record, the peak of the credit card fraud incident is at 11th and around 25th hour.
 
+- The surprising thing is that at night, transactions made by customers are not as frequent as during the day. However, credit card transactions that are indicated as fraud are quite a lot, reaching around 35 transactions in the 35th hour. This can indicate that fraud incidents occur more at night than during the day.
 
 ### Class
 The class feature contains 0 or 1 that represent the transactions are categorized non-fraud or fraud, respectively.
@@ -183,7 +182,9 @@ Confusion matrix is ​​a performance evaluation table of a classification mod
 
 - Model with Isolation Forest cannot detect fraud (0% recall). This indicates that most of the deleted data is considered anomaly. As a result, the model does not predict fraud. Meanwhile, raw data and imputation have sligthly less than 70% recall. It means that the model can correctly guess the fraud transaction around 70% of total fraud prediction.
 
-- Precision is a model ability to accurately predict fraud  
+- Precision is a model ability to accurately predict actual fraud among all fraud prediction. 
+
+- The model with imputation and non-treatment dataset dapat menebak 83% persen fraud dengan benar diantara semua fraud yang diprediksi, sedangkan model dengan data hasil preprocessing isolation forest tidak bisa mendeteksi fraud.
 
 #### Confusion Matrix with Oversampling Dataset
 
@@ -221,7 +222,7 @@ This subchapter discuss what happened to the model after using oversampling meth
 
 ### ROC-AUC Curve
 
-The Receiving Operating Characteristic Curve (ROC) is a curve that shows the classification performace of the model by varying treshold, while Area Under Curve (AUC) is a measure how well . The model is set to `random_state = 1`. 
+The Receiving Operating Characteristic Curve (ROC) is a curve that shows the classification performace of the model by varying treshold, while Area Under Curve (AUC) is a measure how well the model distinguish positive and negative class. It indicates the machine learning model can determine which transaction considered legit or fraud if the score above 0.5 (or 50%). The model is set to `random_state = 1`. 
 
 #### The Perfomance with Oversampling Method
 
@@ -229,7 +230,7 @@ The Receiving Operating Characteristic Curve (ROC) is a curve that shows the cla
   <img width = "800" height = "300" src = "figures/ROC Curve different dataset.png">
 </p>
 
-- The performance each dataset treatment are good.
+- The performance of model with each dataset mendapat nilai AUC lebih dari 0.5. The isolation-forest-treatmen dataset archive the lowest score compared to imputation and non-treatment data. 
 
 #### The Performance of Oversampling with Hyperparameter
 
@@ -242,8 +243,10 @@ The Receiving Operating Characteristic Curve (ROC) is a curve that shows the cla
 ## Conclusion
 The conclusion of the research is
 
-- The transaction mostly occured in range between 1 to 1000 USD. 
-- The best model, based on the AUC metric, XGBoost can accurately predict the fraud.
+- Credit card transactions within 48 hours occur periodically with transactions during the day increasing to around 100,000 during the day, then decreasing to critical point around 1000 at night.
+- Them amount of fraudulent accident around 60000 USD throughout the recorded time. The maximum loss obtained during the transaction is 5000 USD at daylight.
+- Machine learning models perform well on all datasets with their respective variables. The raw and oversampled imputed datasets have good scores on all proposed measures such as accuracy, precision, recall, F1, ROC, and AUC. However, the dataset with isolation forest treatment has a metric score below the two datasets because many data points are considered anomalies or outliers, the majority of which are data categorized as fraudulent transactions.
+
 
 ## Futher Research
 
@@ -251,8 +254,6 @@ The research suggestion of this project:
 
 - Try another machine learning model to predict the credit card fraud.
 - Some preprocessing models, instead of SMOTE, may be potentially improved the machine learning performance.
-
-
 
 ## Reference
 
