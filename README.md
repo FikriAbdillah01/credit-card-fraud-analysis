@@ -19,6 +19,7 @@ Limitation that exist in this project:
 
 - Inadequate computing hardware makes this project time-consuming to execute on large amount dataset like credit card fraud, so not all open-source models are used.
 - The data used was published in 2016. Moreover, this data comes from several bank samples in Belgium, so it is necessary to have the latest data and calibrate the model to obtain good detection accuracy.
+- Does not involved the fraud expertise or finance professional.
 
 ## Tools
 Tools we used in this project:
