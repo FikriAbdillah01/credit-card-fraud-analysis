@@ -10,8 +10,7 @@ A credit card is an electronic payment tool that uses a card issued by a bank or
 ## Objective
 The objective of this project is:
 
-- How many transaction occured at that time
-- How much amount of USD the fraudster get througout 48-hour recorded time.
+- Looking for the highest fraud transactions in terms of nominal value and frequency of occurrence.
 - To see the difference of machine learning performance and feature importances between raw, imputation, and oversampling method through metric performance.
 
 ## Limitation
