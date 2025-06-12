@@ -57,10 +57,9 @@ This subsubpage contains the total of the occured transaction. The figure below 
   <img width = 800 height = "300" src = "figures/transaction amount.png">
 </p>
 
-- From the 48-hour recorded transaction, the amount of fraud one is less than ten thousand USD - about 0.1% of normal credit card transaction. 
+- **Legitimate Transactions Overview**: Over a 48-hour period, credit card transactions ranged from $200,000 to $900,000 for legitimate purchases. The total transaction volume in the morning (9th to 22nd hour) reached $11,000,000, while nighttime transactions (22nd to 34th hour) totaled slightly above $4,000,000. These transactions follow a periodic pattern, occurring frequently during the day and significantly declining at night.
 
-- The fraud transaction in total around 60000 USD and maximum value transaction obtained by the fraudster from this credit card incident was around 5000 USD in the 10th hour. The criminal received it at a busy time when many customers were doing transaction.
-
+- **Fraudulent Transaction Insight**: Fraudulent transaction amounts ranged from $50 to $6,000, with total fraud-related transactions summing to $60,000 over the 48-hour period. During the daytime (9th to 22nd hour), fraud accounted for $22,000 (0.2\% of total daytime transactions), while at night (22nd to 34th hour), fraudulent transactions totaled just over $12,000 (0.28\% of nighttime transactions). Additionally, while fraud can occur at any time, **fraudsters tend to acquire more money during nighttime transactions**.
 <p align = "center">
   <img width = "800" height = "300" src = "figures/transaction occured.png">
 </p>
