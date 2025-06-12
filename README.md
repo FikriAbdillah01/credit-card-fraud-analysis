@@ -21,7 +21,7 @@ Limitation that exist in this project:
 - Does not involved the fraud expertise or finance professional.
 
 ## Tools
-Tools we used in this project:
+The tools and its version we used in this project:
 
 - python ver 2.2.2
 - matplotlib versi 3.10.0
@@ -32,11 +32,11 @@ Tools we used in this project:
 - imbalanced-learn ver 0.13.0
 
 ## Data Description
-The data published by Machine Learning Research Group University Libe de Bruxelles. Credit card dataset cannot be uploaded to Github due to large data size. This dataset can be downloaded in Kaggle platform. The dataset contains:
+The data published by Machine Learning Research Group University Libe de Bruxelles. Credit card dataset cannot be uploaded to Github due to large data size. This dataset is open-source and can be downloaded in Kaggle platform. The dataset contains:
 
 - Time: This feature represents time when the credit card transaction occured 
 - the amount of transaction: represent the total transaction occured at that time
-- Identity of the customer (V1 to V32): due to the protection regulation of the bank, the identity customer is turned into random numbers
+- Identity of the customer (V1 to V32): due to the protection regulation of the bank, the identity customer is turned into random, float numbers
 - Class: A column that contains indications of fraud or not a transaction.
 
 ## Exploratory Data Analysis
