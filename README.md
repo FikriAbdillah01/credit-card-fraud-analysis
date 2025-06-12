@@ -65,7 +65,7 @@ This subsubpage contains the total of the occured transaction. The figure below 
   <img width = "800" height = "300" src = "figures/transaction occured.png">
 </p>
 
-- The figure above illustrates credit card utilization recorded over a 48-hour period. Normal transactions typically occur from morning to evening in a periodic pattern. The majority of customers use credit cards during the day, with transaction volumes significantly dropping at night. Meanwhile, fraudulent transactions occur consistently throughout the day and night. The recorded data indicates that the peak of credit card fraud incidents occurs at the 11th and around the 25th hour.
+- The figure above illustrates credit card utilization recorded over a 48-hour period. Normal transactions typically follow a periodic pattern, occurring most frequently from morning to evening. During this period, approximately 115 thousand transactions take place between the 9th and 22nd hour. In contrast, transaction volumes drop significantly at night, totaling 54 thousand transactions between the 22nd and 34th hour. Fraudulent transactions, however, occur sporadically throughout the day and night, showing no clear pattern. The recorded data indicates that credit card fraud incidents peak at the 11th hour and around the 25th hour.
 
 - The surprising thing is that at night, transactions made by customers are not as frequent as during the day. However, credit card transactions that are indicated as fraud are quite a lot, reaching around 35 transactions in the 35th hour. This can indicate that fraud incidents occur more at night than during the day.
 
