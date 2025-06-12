@@ -35,8 +35,8 @@ The tools and its version we used in this project:
 The data published by Machine Learning Research Group University Libe de Bruxelles. Credit card dataset cannot be uploaded to Github due to large data size. This dataset is open-source and can be downloaded in Kaggle platform. The dataset contains:
 
 - Time: This feature represents time when the credit card transaction occured 
-- the amount of transaction: represent the total transaction occured at that time
-- Identity of the customer (V1 to V32): due to the protection regulation of the bank, the identity customer is turned into random, float numbers
+- the amount of transaction: denotes how much money they used for transaction
+- V1 to V32: The credit card customer identity
 - Class: A column that contains indications of fraud or not a transaction.
 
 ## Exploratory Data Analysis
@@ -49,7 +49,7 @@ This subsubpage contains the total of the occured transaction. The figure below 
   <img width = "600" height "300" src = "figures/The%20Amount%20of%20Fraud%20Transaction%20(1).png">
 </p>
 
-- Based on the picture, the majority of the total transaction occured between 0 and 1000 USD, either fraud or not. The plot picture also means that the fraud transactions in that range are hard to be detected.
+- Based on the picture, the majority of the total transaction occured between 0 and 1000 USD, either fraud or not. The plot picture tells us that the fraud transactions in that range are hard to be detected.
 
 - Transactions made above this nominal amount are also often carried out with varying values.
 
