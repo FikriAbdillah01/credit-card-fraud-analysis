@@ -11,7 +11,7 @@ A credit card is an electronic payment tool that uses a card issued by a bank or
 The objective of this project is:
 
 - Identifying the peak periods of fraud risk and quantifying the resulting financial losses
-- Comparing machine learning models with 3 datasets that go through 3
+- Create and comparing the performance of machine learning models with 3 datasets that go through 3
  preprocessing techniques, raw, imputation, and isolation forest.
 ## Limitation
 Limitation that exist in this project:
