@@ -239,7 +239,7 @@ The Receiver Operating Characteristic (ROC) Curve helps evaluate a model’s per
 ## Conclusion
 The conclusion of the research is
 
-- The analysis of 48-hour transaction data shows that fraudulent activity is more frequent at night than during the day, as reflected in the pattern of detected fraud cases. Additionally, financial losses from nighttime fraud are higher compared to daytime, highlighting the increased risk during those hours.
+- The analysis of 48-hour transaction data shows that fraudulent activity is more frequent at night than during the day, as reflected in the pattern of detected fraud cases. Additionally, financial losses from nighttime fraud are higher compared to daytime, highlighting the increased risk during those hours. The fraudulent transactions over that period resulted in a total financial loss of \$60,000.
 
 - Models trained on datasets from the raw and imputation approaches
  consistently outperform the data using the Isolation Forest.
@@ -249,7 +249,7 @@ The conclusion of the research is
 The research suggestion of this project:
 
 - Try another machine learning model to predict the credit card fraud.
-- Some preprocessing models, instead of SMOTE, may be potentially countered the imbalance problem and improved the machine learning performance.
+- Exploring alternative preprocessing models to enhance machine learning performance.
 
 ## Reference
 
